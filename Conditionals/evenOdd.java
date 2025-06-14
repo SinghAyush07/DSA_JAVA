@@ -7,10 +7,15 @@ public class evenOdd {
 		int n = sc.nextInt();
 
 		if (n%2 == 0){
-			System.out.print(n + " is Even.");
+			System.out.println(n + " is Even.");
 		}
 		else {
-			System.out.print(n + " is Odd.");
+			System.out.println(n + " is Odd.");
 		}
+
+		// ternary operator
+
+		System.out.println((n%2 == 0) ? "even" : "odd");
+		sc.close();
 	}
 }
