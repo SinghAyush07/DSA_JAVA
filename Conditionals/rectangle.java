@@ -19,5 +19,6 @@ class rectangle {
         } else {
             System.out.println("Area is equal to perimeter");
         }
+        sc.close();
     }
 }
