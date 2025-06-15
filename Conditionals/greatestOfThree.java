@@ -23,6 +23,7 @@ public class greatestOfThree {
             } else {
                 System.out.println(c + " is greatest input.");
             }
+            sc.close();
         }
         // alter:- using logical operator &&
         //  if (a>b && a>c) System.out.println(a+" is greatest.")
