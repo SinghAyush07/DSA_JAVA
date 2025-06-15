@@ -17,5 +17,6 @@ public class isTriangle {
         } else {
             System.out.println("a, b and c cannot be the sides of a triangle.");
         }
+        sc.close();
     }    
 }

@@ -14,7 +14,7 @@ public class calculator {
         int a = sc.nextInt();
         System.out.print("Enter number b :");
         int b = sc.nextInt();
-
+        sc.close();
         System.out.println("Enter operation needed to be performed :\n 1. multiplication \n 2. dividion \n 3. addition \n 4. subtraction");
         int n = sc.nextInt();
         System.out.print("Result : ");
