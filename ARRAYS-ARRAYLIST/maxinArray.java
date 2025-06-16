@@ -1,4 +1,5 @@
 // Find maximum number stored in array and print it
+// Also find Second largest number
 
 import java.util.Scanner;
 
@@ -21,8 +22,17 @@ public class maxinArray {
             if(arr[i] > max) {
                 max = arr[i];
             }
+            // max = Math.max(max,a[i]);
         }
         System.out.println(max);
         sc.close();
+        //Finding second largest element
+        int smx = Integer.MIN_VALUE;
+        for(int i=0; i<arr.length; i++) {
+            if(max!=arr[i]) {
+                smx = Math.max(smx, arr[i]);
+            }
+        }
+        System.out.println("Second Largest Element : " + smx);
     }
 }
