@@ -8,7 +8,6 @@ public class reverseArray {
             System.out.print(ele + " ");
         }
         System.out.println();
-        // int i = 0, j = arr.length-1;
         int n = arr.length;
         for(int i = 0; i < arr.length/2; i++) {
             int temp = arr[i];
