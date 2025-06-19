@@ -13,7 +13,6 @@ public class nextGreatestEle {
             }
                 res[i] = max;
             }
-        }
         res[arr.length-1] = -1;
         for(int ele : res ) {
             System.out.print(ele + " ");
