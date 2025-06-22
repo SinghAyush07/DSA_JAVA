@@ -80,6 +80,6 @@ public class ScoreAfterFlippingMat {
         }
 
         System.out.print("Score of Matrix after flipping : " + score);
-
+        sc.close();
     }
 }
