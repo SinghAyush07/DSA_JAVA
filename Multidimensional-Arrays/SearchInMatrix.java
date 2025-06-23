@@ -54,5 +54,6 @@ public class SearchInMatrix {
         }
         if(found == false)
         System.out.print("NOT FOUND");
+        sc.close();
     }
 }
