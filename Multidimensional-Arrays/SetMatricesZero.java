@@ -99,6 +99,24 @@ public class SetMatricesZero {
     // Using Constant extra space solution
     // use 0th row and col as the extra space to mark zeroes
 
+    // First check if there is any 0's present in the 0th row and column initially before starting to chech other part of the matrix
+    boolean zeroRow = false;
+    boolean zeroCol = false;
+
+    for(int j=0; j<n; j++) { // checking 0th row
+        if(mat[0][j] == 0) {
+            zeroRow = true;
+            break;
+        }
+    }
+
+    for(int i=0; i<m; i++) { // checking 0th column
+        if(mat[i][0] == 0) {
+            zeroCol = true;
+            break;
+        }
+    }
+
     for(int i=1; i<m; i++) {
         for(int j=1; j<n; j++) {
             if(mat[i][j] == 0) {
@@ -128,16 +146,18 @@ public class SetMatricesZero {
         }
     }
 
-    // we have to check if mat[0][0] is 0 then make whole 0th row and column 0
-
-    if(mat[0][0] == 0){
-        for(int i=0; i<m; i++) {
-            mat[i][0] = 0;
-        }
-        for(int j=0; j<n; j++) {
+    if(zeroRow == true) {
+        for(int j=0; j<n ; j++) {
             mat[0][j] = 0;
         }
     }
+
+    if(zeroCol == true) {
+        for(int i=0; i<m; i++) {
+            mat[i][0] = 0;
+        }
+    }
+
 
     System.out.println("Resultant Matrix : ");
     printMatrix(mat);
