@@ -15,6 +15,8 @@ public class revWords {
 
         // Method 1 : two pointer
         int i = 0, j = 0;
+
+        // using another stringBuilder 
         while(i<str.length()) {
             if(str.charAt(j) == ' ') {
                 StringBuilder s = new StringBuilder();
