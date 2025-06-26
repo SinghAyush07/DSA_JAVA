@@ -8,7 +8,7 @@ public class isomorphicString {
 
         System.out.print("Enter the string : ");
         String s = sc.next();
-        System.out.print("Enter the string : ");
+        System.out.print("Enter the stri ng : ");
         String t = sc.next();
 
         // the characters should have one one mapping
@@ -38,7 +38,7 @@ public class isomorphicString {
             else {
                 if(a[idx-1]!=dh) 
                      flag=false;
-            }
+            } 
         }
         System.out.println(flag);
         sc.close();
