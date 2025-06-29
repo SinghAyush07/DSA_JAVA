@@ -40,5 +40,6 @@ public class distinctele {
             arr[i] *= -1;
         }
         print(arr);
+        sc.close();
     }
 }
