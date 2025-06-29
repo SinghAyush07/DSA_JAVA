@@ -29,7 +29,7 @@ public class LowerBound {
             int mid = lo + (hi-lo) / 2;
             if(arr[mid] < x) lo = mid + 1;
             else if(arr[mid] >= x) {
-                lb = mid;
+                lb = Math.min(mid, lb);
                 hi = mid-1;
             }
         }
