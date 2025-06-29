@@ -16,9 +16,12 @@ public class LowerBound {
         System.out.print("Enter the number of elements in array : ");
         int n = sc.nextInt();
         int[] arr = new int[n];
+        System.out.print("Enter the elements of the array : ");
         for(int i=0; i<n; i++) {
             arr[i] = sc.nextInt();
         }
+        System.out.print("Enter the target : ");
+        int x = sc.nextInt();
         int lb = n;
         // using binary search algorithm
         int hi = n-1, lo = 0;
@@ -30,6 +33,7 @@ public class LowerBound {
                 hi = mid-1;
             }
         }
-        System.out.print("Lower Bound : " + lb);
+        System.out.println("Lower Bound : " + lb);
+        sc.close();
     }
 }
