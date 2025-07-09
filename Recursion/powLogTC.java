@@ -17,5 +17,7 @@ public class powLogTC {
         System.out.print("Enter the power : ");
         int b = sc.nextInt();
         System.out.print(a+" raised to the power " + b + " is " + powLog(a, b));
+
+        sc.close();
     }
 }
