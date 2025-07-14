@@ -8,8 +8,11 @@ public class skipAchar {
             System.out.println(ans);
             return;
         }
-        if(s.charAt(i) != 'a' && s.charAt(i) != 'A') ans += s.charAt(i);
-        skip(i+1,s,ans);
+        if(s.charAt(i) != 'a' && s.charAt(i) != 'A') {
+        // ans += s.charAt(i);
+        // skip(i+1,s,ans);
+            skip(i+1, s, ans+s.charAt(i));
+        } else skip(i+1,s,ans);
     }
 
     public static void main(String[] args) {
