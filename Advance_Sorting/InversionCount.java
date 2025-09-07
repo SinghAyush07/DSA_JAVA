@@ -1,7 +1,7 @@
-// Merge Sort algorithm
-// Space and Time Complexity : O(nlogn)
+// count number of inversion using mergeSort algo
 
-public class mergeSort {
+public class InversionCount{
+    static int count=0;
     public static void print(int[] arr) {
         for(int i=0; i<arr.length; i++) {
             System.out.print(arr[i] + " ");
@@ -18,7 +18,7 @@ public class mergeSort {
             else {c[k] = b[j]; j++;}
             k++;
         }
-        if(m<n) {
+        if(i>=m) {
             while(j<n) {
                 c[k] = b[j]; k++;j++;
             }
@@ -28,31 +28,34 @@ public class mergeSort {
             }
         }
     }
-    public static void mergesort(int[] arr) {
+    public static void inversioncount(int[] a, int[] b) {
+        int i=0, j=0;
+        while(i<a.length&&j<b.length) {
+            if(a[i] > b[j]) {
+                count+=a.length-i;j++;
+            } else i++;
+        }
+    }
+    public static void mergeSort(int[] arr) {
         int n = arr.length;
         if(n==1) return;
         int[] a = new int[n/2];
         int[] b = new int[n-n/2];
-        for(int i=0; i<n/2; i++) {
-            a[i] = arr[i];
-        }
-        for(int i=0; i<n-n/2; i++) {
-            b[i] = arr[n/2 + i];
-        }
-        //magic
-        mergesort(a);
-        mergesort(b);
-        // merge these 'a' and 'b'
-        merge(a, b, arr);
-        // delete a and b -> to improve space complexity
-        a = null; b = null;
+        for(int i=0; i<n/2; i++) a[i] = arr[i];
+        for(int i=0; i<n-n/2; i++) b[i] = arr[n/2 + i];
+        mergeSort(a);
+        mergeSort(b);
+        inversioncount(a,b);
+        merge(a,b,arr);
     }
     public static void main(String[] args) {
-        int[] arr = {80, 10, 70, 30, 60, 40, 50, 20};
+       // int[] arr = {8,2,5,3,1,4};
+        int[] arr = {109,33,89,27,60,10,70};
         System.out.print("Origianl Array: ");
         print(arr);
-        mergesort(arr);
+        mergeSort(arr);
         System.out.print("Sorted Array: ");
         print(arr);
+        System.out.println(count);
     }
 }
