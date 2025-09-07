@@ -43,6 +43,8 @@ public class mergeSort {
         mergesort(b);
         // merge these 'a' and 'b'
         merge(a, b, arr);
+        // delete a and b -> to improve space complexity
+        a = null; b = null;
     }
     public static void main(String[] args) {
         int[] arr = {80, 10, 70, 30, 60, 40, 50, 20};
