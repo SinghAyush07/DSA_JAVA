@@ -32,7 +32,7 @@ public class quickSortAlgo {
     }
     public static void quickSort(int[] arr, int lo, int hi) {
         // base case
-        if(lo>=hi) return;
+        if(lo>hi) return;
         // pivot (arr[lo]) ko sahi jagah rakh do 
         // & left part me <= pivot
         int idx = partition(arr, lo, hi);
