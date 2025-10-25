@@ -1,5 +1,4 @@
 
-
 public class implementationLL {
     static class Node {
         int val;
