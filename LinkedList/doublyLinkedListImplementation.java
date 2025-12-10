@@ -96,6 +96,22 @@ public class doublyLinkedListImplementation {
             temp.prev = temp.prev.prev;
             size--;
         }
+        void get(int idx) {
+            if(idx<0 || idx>size) {
+                System.out.println("invalid index"); return;
+            }
+            Node temp = head;
+            for(int i=0; i<idx; i++) temp = temp.next;
+            System.out.println(temp);
+        }
+        void set(int idx, int val) {
+            if(idx<0 || idx>size) {
+                System.out.println("invalid index"); return;
+            }
+            Node temp = head;
+            for(int i=0; i<idx; i++) temp = temp.next;
+            temp.val = val;
+        }
     }
     public static void print(Node head) {
         Node temp = head;
