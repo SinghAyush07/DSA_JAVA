@@ -20,7 +20,7 @@ class circularLL {
         Node head;
         Node tail;
         int size;
-        void display(Node head) {
+        void display() {
             Node temp = head;
             while(temp.next != head) { 
                 System.out.print(temp.val+ " -> ");
@@ -146,5 +146,13 @@ class circularLL {
         // d.next = e;
         // e.next = a;
         // print(a);
+        CSLL list = new CSLL();
+        list.insertAtHead(10);
+        list.insertAtHead(20);
+        list.insertAtHead(30);
+        list.insertAtHead(40);
+        list.insertAtHead(50);
+        list.insertAtHead(60);
+        list.display();
     }
 }
