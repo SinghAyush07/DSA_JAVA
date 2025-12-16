@@ -24,6 +24,7 @@ public class maxNumberStringPairs {
             String rev = reverseString(ele);
             if(set.contains(rev)) {
                 count++;
+                set.remove(rev);
             } else {
                 set.add(ele);
             }

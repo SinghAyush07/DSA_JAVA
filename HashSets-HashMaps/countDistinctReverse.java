@@ -13,7 +13,7 @@ public class countDistinctReverse {
         return rev;
     }
     public static void main(String[] args) {
-        int[] arr = {1, 13, 24, 31, 46};
+        int[] arr = {2,2,2,2};
         HashSet<Integer> set = new HashSet<>();
         for(int i:arr) {
             set.add(i);
