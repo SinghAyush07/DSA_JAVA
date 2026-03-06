@@ -21,6 +21,6 @@ public class reverseStack {
         System.out.println(st_reverse);
         // creating
         
-        sc.close();
+        sc.close(); 
     }
 }
