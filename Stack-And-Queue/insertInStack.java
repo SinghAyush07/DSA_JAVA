@@ -19,12 +19,14 @@ public class insertInStack {
     while (!st_Orignal.isEmpty()) {
       st_temp.push(st_Orignal.pop());
     }
+
     System.out.print("Enter the number: ");
     int num = sc.nextInt();
     st_temp.push(num);
     while (!st_temp.isEmpty()) {
       st_Orignal.push(st_temp.pop());
     }
+
     //inserting at ith index
     System.out.print("Enter the number and index : ");
     int num2 = sc.nextInt();
